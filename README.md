@@ -10,3 +10,5 @@ latter achieved validation accuracy of 97.93% with Support Vector Machine (SVM) 
 Fold-4, and with Random Forest (RF) it stood at 97.94%.
 # Results
 Please find attached the PowerPoint presentation containing all the results obtained during the implementation of this project.
+# Jupyter Notebooks
+I've included two .py files: one comprising code for a Convolutional Neural Network, and the other containing code for a CNN with an integrated Attention mechanism
