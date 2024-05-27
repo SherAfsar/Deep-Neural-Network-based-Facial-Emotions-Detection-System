@@ -10,24 +10,34 @@ https://www.kaggle.com/datasets/shawon10/ckplus
 ## Dataset Preprocessing
 The dataset preprocessing for emotion detection involved several steps: 
 
-First, the list of images was obtained using the listdir() function to gather the full paths of all images. 
+- First, the list of images was obtained using the listdir() function to gather the full paths of all images. 
 
-Next, OpenCV was used to read these images. The images were then resized to a uniform dimension of 48x48 pixels to ensure consistency and reduce noise. Each pixel value was normalized to a range between 0 and 1 by dividing by 255 to standardize the intensity values. 
+- Next, OpenCV was used to read these images.
 
-Data augmentation techniques were applied to increase the variability of the dataset, making the model more generalizable. Labels were assigned to each image based on their respective classes, and these labels were converted into a one-hot encoding format to avoid unintended ordinal relationships. 
+- The images were then resized to a uniform dimension of 48x48 pixels to ensure consistency and reduce noise.
 
-Finally, the dataset was shuffled with a fixed random state to ensure consistent shuffling across different runs, preventing the model from learning patterns based on the sequence of the dataset and improving its performance on unseen data.
+- Each pixel value was normalized to a range between 0 and 1 by dividing by 255 to standardize the intensity values. 
+
+- Data augmentation techniques were applied to increase the variability of the dataset, making the model more generalizable.
+
+- Labels were assigned to each image based on their respective classes, and these labels were converted into a one-hot encoding format to avoid unintended ordinal relationships. 
+
+- Finally, the dataset was shuffled with a fixed random state to ensure consistent shuffling across different runs, preventing the model from learning patterns based on the sequence of the dataset and improving its performance on unseen data.
 
 ## Model Creation
-The Baseline CNN model for emotion detection takes a 3D array input of image dimensions and channels, constructed sequentially with each layer's output serving as the next layer's input.
+For the creation of model, following steps were taken: 
 
-It features a first 2D convolutional layer with six 5x5 filters using ReLU activation and zero-padding, followed by a 2x2 MaxPooling2D layer. 
+- The Baseline CNN model for emotion detection takes a 3D array input of image dimensions and channels, constructed sequentially with each layer's output serving as the next layer's input.
 
-This is followed by a second convolutional layer with sixteen 5x5 filters and another MaxPooling2D layer. 
+- It features a first 2D convolutional layer with six 5x5 filters using ReLU activation and zero-padding, followed by a 2x2 MaxPooling2D layer. 
 
-The third convolutional layer has sixty-four 3x3 filters, also followed by MaxPooling2D. A Flatten layer converts the 3D output into a 1D vector, feeding into a fully connected layer with 128 neurons, then another with seven neurons for classification. 
+- This is followed by a second convolutional layer with sixteen 5x5 filters and another MaxPooling2D layer. 
 
-A Dropout layer with a 0.5 rate prevents overfitting. The output layer uses the SoftMax function for class probabilities, employing the categorical_crossentropy loss function and RMSProp optimizer to minimize errors and improve predictions.
+- The third convolutional layer has sixty-four 3x3 filters, also followed by MaxPooling2D.
+
+- A Flatten layer converts the 3D output into a 1D vector, feeding into a fully connected layer with 128 neurons, then another with seven neurons for classification. 
+
+- A Dropout layer with a 0.5 rate prevents overfitting. The output layer uses the SoftMax function for class probabilities, employing the categorical_crossentropy loss function and RMSProp optimizer to minimize errors and improve predictions.
 
 ## Model Training
 The model training section covers the details of training parameters and techniques. 
@@ -47,8 +57,7 @@ To evaluate the performance of both architectures. Different techniques are empl
 
 - For Attention-CNN, stratified K-Fold cross validation is utilized.
 
-- The former achieved validation accuracy around 92.78% on Fold-2. The latter achieved validation accuracy of 97.93% with Support Vector Machine (SVM) classifier on 
-Fold-4, and with Random Forest (RF) it stood at 97.94%.
+- The former achieved validation accuracy around 92.78% on Fold-2. The latter achieved validation accuracy of 97.93% with Support Vector Machine (SVM) classifier on Fold-4, and with Random Forest (RF) it stood at 97.94%.
 
 ## Results
 Please find attached the PowerPoint presentation containing all the results obtained during the implementation of this project.
