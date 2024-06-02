@@ -7,7 +7,7 @@ This project presents two deep neural network architectures for emotion detectio
 - Matplotlib
 - Tensor Flow
 - Keras
-- scikit-learn
+- Scikit-learn
 - And others
 
 ## Dataset
