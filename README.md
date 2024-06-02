@@ -70,7 +70,7 @@ To evaluate the performance of both architectures. Different techniques are empl
 Please find attached the PowerPoint presentation containing all the results obtained during the implementation of this project.
 
 ## Jupyter Notebooks
-I've included two .py files: one comprising code for a Convolutional Neural Network, and the other containing code for a CNN with an integrated Attention mechanism
+I've uploaded two .py files: one comprising code for a Convolutional Neural Network, and the other containing code for a CNN with an integrated Attention mechanism
 
 ## 🚀 About Me
 Highly skilled Data Analyst with 2 years of experience in leveraging data-driven insights to inform strategic decision-making. Proficient in SQL, Python, and advanced Excel, with a strong background in data visualization tools such as Tableau. Demonstrated expertise in data cleaning, analysis, and interpretation to support business objectives and drive efficiency. Adept at translating complex datasets into actionable insights and effective business solutions. Passionate about continuous learning and staying updated with industry trends to deliver innovative analytical solutions. 
