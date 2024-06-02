@@ -1,7 +1,15 @@
 
-# Facial Emotions Detection System Using Deep Neural Networks
+# Facial Emotions Detection System Using DNN
 This project presents two deep neural network architectures for emotion detection, trained on the Cohn-Kanade (CK+) dataset: a Baseline CNN and an Attention CNN with SVM and RF classifiers. The Baseline CNN, evaluated using K-Fold cross-validation, achieved a validation accuracy of 92.78% on Fold-2. The Attention CNN, assessed with stratified K-Fold cross-validation, reached 97.93% accuracy with the SVM classifier and 97.94% with the RF classifier on Fold-4, showing nearly identical performance due to their similar architectures. Both models also demonstrated strong testing accuracies, detailed further in the report.
 
+## Technologies used
+- Numpy
+- Pandas
+- Matplotlib
+- Tensor Flow
+- Keras
+- scikit-learn
+- And others
 
 ## Dataset
 Both neural networks are trained on Cohn-Kanade (Ck+)dataset. 
